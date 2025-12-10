@@ -1,0 +1,239 @@
+/* public/css/admin.css */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* --- Global Admin Styles --- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa; /* Latar belakang yang lebih terang */
+    color: #343a40;
+}
+
+/* --- Admin Layout --- */
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- Sidebar (Biru Polos & Sederhana) --- */
+.admin-sidebar {
+    width: 250px;
+    background-color: #0052cc; /* Biru solid yang elegan */
+    color: #ffffff;
+    padding: 0;
+    position: fixed;
+    height: 100vh;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.admin-sidebar.collapsed {
+    width: 70px;
+}
+
+.admin-sidebar .sidebar-header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-sidebar .sidebar-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    transition: opacity 0.3s ease;
+}
+
+.admin-sidebar.collapsed .sidebar-header h3 {
+    opacity: 0;
+}
+
+.admin-sidebar .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-sidebar .sidebar-menu li {
+    margin-bottom: 0;
+}
+
+.admin-sidebar .sidebar-menu a {
+    color: rgba(255, 255, 255, 0.8); /* Teks sedikit transparan */
+    text-decoration: none;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.admin-sidebar .sidebar-menu a:hover,
+.admin-sidebar .sidebar-menu a.active {
+    background-color: #0046b3; /* Biru lebih tua saat hover/aktif */
+    color: #ffffff;
+}
+
+.admin-sidebar .sidebar-menu a i {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    width: 25px;
+    text-align: center;
+}
+
+/* --- Main Content Area --- */
+.admin-main {
+    flex: 1;
+    margin-left: 250px;
+    padding: 30px;
+    transition: margin-left 0.3s ease;
+}
+
+.admin-main.full-width {
+    margin-left: 70px;
+}
+
+/* --- Top Bar (Lebih Sederhana) --- */
+.admin-topbar {
+    background-color: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.admin-topbar .toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.admin-topbar .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.admin-topbar .user-info img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* --- Dashboard Cards (Lebih Sederhana) --- */
+.dashboard-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-left: 4px solid #e9ecef; /* Border netral */
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dashboard-card.primary { border-left-color: #0052cc; }
+.dashboard-card.success { border-left-color: #198754; }
+.dashboard-card.warning { border-left-color: #fd7e14; }
+.dashboard-card.danger {  border-left-color: #dc3545; }
+
+.dashboard-card .card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.dashboard-card.primary .card-icon { color: #0052cc; }
+.dashboard-card.success .card-icon { color: #198754; }
+.dashboard-card.warning .card-icon { color: #fd7e14; }
+.dashboard-card.danger .card-icon { color: #dc3545; }
+
+.dashboard-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.dashboard-card p {
+    color: #6c757d;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* --- Table (Lebih Sederhana) --- */
+.admin-table {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.admin-table thead {
+    background-color: #f8f9fa; /* Latar abu-abu terang */
+    color: #495057;
+    font-weight: 600;
+}
+
+.admin-table th, .admin-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.admin-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .admin-sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .admin-sidebar.show {
+        transform: translateX(0);
+    }
+
+    .admin-main {
+        margin-left: 0;
+        padding: 15px;
+    }
+}
+/* resources/css/admin.css atau di file CSS utama Anda */
+
+.itinerary-day {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.itinerary-day label {
+    font-weight: 600;
+}
+
+.input-group .btn {
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.card-header.bg-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.img-thumbnail {
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+}

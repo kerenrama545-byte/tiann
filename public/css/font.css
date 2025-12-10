@@ -1,0 +1,94 @@
+
+/* ===============================
+   GLOBAL FONT MODERN & CLEAN
+================================*/
+body {
+    font-family: 'Inter', 'Poppins', sans-serif;
+    letter-spacing: 0.2px;
+    color: #2E2E2E;
+}
+
+/* ===============================
+   HEADINGS
+   Consistent: Bold + clean spacing
+================================*/
+h1, .display-3 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+h2.section-title {
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: -0.3px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.05rem;
+    color: #6c757d;
+    margin-top: -4px;
+}
+
+/* ===============================
+   HERO TEXT
+================================*/
+.hero-subtext {
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    opacity: 0.9;
+}
+
+.word-modern {
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+/* ===============================
+   MODERN CARD TEXT
+================================*/
+.modern-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.modern-card p {
+    font-size: 0.95rem;
+    color: #6c757d;
+    line-height: 1.45;
+}
+
+/* ===============================
+   PACKAGE CARD TEXT
+================================*/
+.package-modern h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.package-modern p {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+.price-modern {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+/* ===============================
+   FEATURE SECTION TEXT
+================================*/
+.feature-modern h5 {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.feature-modern p {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
